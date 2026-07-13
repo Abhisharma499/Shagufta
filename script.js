@@ -1,41 +1,81 @@
 const storySteps = [
     {
-        // Question 1
-        text: "First off... do you promise to answer the next questions honestly? 😇",
+        // Question 1 (Index 0)
+        text: "Hey Shagufta, Jatinder here... I have a surprise for you 😇 Do you promise to answer honestly?",
         buttons: [
-            { text: "Yes, I promise!", nextStep: 1 },
-            { text: "Fine, yes", nextStep: 1 }
+            { text: "I promise! 🥰", nextStep: 1 },
+            { text: "Yes, go on", nextStep: 1 }
         ]
     },
     {
-        // Question 2
-        text: "Awesome. Second question: Am I your favorite person? ☀️",
+        // Question 2 (Index 1)
+        text: "Do you believe in destiny? Because meeting you felt like my favorite page of a love story... ✨",
         buttons: [
-            { text: "Yes, obviously", nextStep: 2 },
-            { text: "Unquestionably yes", nextStep: 2 }
+            { text: "Yes, I do! ❤️", nextStep: 2 },
+            { text: "Only with you 🥺", nextStep: 2 }
         ]
     },
     {
-        // Question 3
-        text: "Would you hate it if I asked you out on a date this weekend? ☕",
+        // Question 3 (Index 2)
+        text: "Am I the lucky person who gets to make you laugh and bring that gorgeous smile to your face? ☀️",
         buttons: [
-            { text: "I would love it! 😍", nextStep: 4 }, // Jumps to success screen
-            { text: "Yes, I'd hate it", nextStep: 3 }    // Triggers the loop question
+            { text: "Yes, obviously! 💕", nextStep: 3 },
+            { text: "Unquestionably yes!", nextStep: 3 }
         ]
     },
     {
-        // Question 4 (The Runaway Button Step)
-        text: "Are you absolutely sure? There will be free snacks involved... 🍩",
+        // Question 4 (Index 3)
+        text: "Did you know that my heart beats a little faster every single time your name pops up on my screen? 💓",
         buttons: [
-            { text: "Okay fine, let's go! ✨", nextStep: 4 },
-            { text: "Still no", nextStep: 3, type: "runaway" } // This button runs away!
+            { text: "Mine does too! 👉👈", nextStep: 4 },
+            { text: "I had a feeling... 🙈", nextStep: 4 }
         ]
     },
     {
-        // Question 5 / Success Screen
-        text: "Yay! 🎉 It's an official date. Check your phone for details! ❤️",
+        // Question 5 (Index 4)
+        text: "If I promised to always hold your hand through dark days and celebrate all your wins, would you let me? 🤝",
         buttons: [
-            { text: "Close", nextStep: -1 }
+            { text: "I would love that 🌹", nextStep: 5 },
+            { text: "Always, yes!", nextStep: 5 }
+        ]
+    },
+    {
+        // Question 6 (Index 5)
+        text: "Would you mind if we wrote our own beautiful, infinite love story together? 📖",
+        buttons: [
+            { text: "Let's write it! ✍️", nextStep: 6 },
+            { text: "No, I'd hate it", nextStep: 5, type: "runaway" } // Stays on same step if clicked
+        ]
+    },
+    {
+        // Question 7 (Index 6)
+        text: "Are you ready for the most important, heart-pounding question of my life? 👉👈",
+        buttons: [
+            { text: "Yes, tell me! 😍", nextStep: 7 },
+            { text: "No, skip", nextStep: 6, type: "runaway" }
+        ]
+    },
+    {
+        // Question 8 (Index 7) - The Grand Proposal!
+        text: "Shagufta, you deserve the absolute best in this world. Will you do me, Jatinder, the honor of being my partner? 💍",
+        buttons: [
+            { text: "YES! A million times! 😍", nextStep: 9 }, // Jumps straight to success screen
+            { text: "No 😢", nextStep: 8, type: "runaway" }    // Leads to guilt trip
+        ]
+    },
+    {
+        // Question 9 (Index 8) - Guilt Trip (Infinite loop if they try to bypass runaway)
+        text: "Wait... did you just try to click No? Look at my eyes, Shagufta. Are you absolutely sure? 🥺",
+        buttons: [
+            { text: "Okay fine, Yes! ❤️", nextStep: 9 },
+            { text: "Yes, I am sure", nextStep: 8, type: "runaway" }
+        ]
+    },
+    {
+        // Question 10 (Index 9) - Success Screen
+        text: "Yay! 🎉 Shagufta & Jatinder, forever and always. You have made me the happiest guy alive! Check your phone! ❤️",
+        buttons: [
+            { text: "Our Forever Starts Now 👩‍❤️‍👨", nextStep: -1 }
         ]
     }
 ];
@@ -64,6 +104,7 @@ function showStep(index) {
         button.innerText = btnInfo.text;
         button.classList.add('btn', 'main-btn');
         
+        // Handle runaway behavior
         if (btnInfo.type === "runaway") {
             button.classList.add('runaway');
             const escape = () => moveButtonRandomly(button);
