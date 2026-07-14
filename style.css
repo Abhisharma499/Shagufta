@@ -2,8 +2,10 @@ body {
 margin: 0;
 padding: 0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-/* Soft, warm romantic gradient background */
-background: linear-gradient(135deg, #ffe3e3 0%, #fbc2eb 100%);
+/* Dreamy, shifting sunset romantic gradient */
+background: linear-gradient(-45deg, #ff758f, #ff9a9e, #fecfef, #a6c1ee, #fbc2eb);
+background-size: 400% 400%;
+animation: gradientShift 16s ease infinite;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -11,6 +13,13 @@ height: 100vh;
 color: #4a4a4a;
 overflow: hidden;
 position: relative;
+}
+
+/* Background animation logic to make the colors slowly flow together */
+@keyframes gradientShift {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
 }
 
 .landing-container {
@@ -22,7 +31,7 @@ h1 {
 font-size: 2.5rem;
 color: #590d22;
 margin-bottom: 25px;
-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+text-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
 }
 
 .btn {
@@ -53,7 +62,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(89, 13, 34, 0.15);
+background: rgba(89, 13, 34, 0.12);
 backdrop-filter: blur(8px);
 -webkit-backdrop-filter: blur(8px);
 display: flex;
@@ -71,8 +80,8 @@ border: 1px solid rgba(255, 255, 255, 0.8);
 text-align: center;
 max-width: 420px;
 width: 90%;
-min-height: 380px; /* Ensures plenty of jumping room inside the box /
-position: relative; / CRITICAL: Anchors the absolute runaway button inside this card */
+min-height: 380px;
+position: relative; /* Anchors the runaway buttons inside this card */
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -109,7 +118,7 @@ z-index: 100;
 display: none !important;
 }
 
-/* Raining Hearts Styling */
+/* Raining Hearts/Flowers Styling */
 .heart {
 position: fixed;
 top: -10vh;
