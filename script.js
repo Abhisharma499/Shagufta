@@ -1,7 +1,7 @@
 const storySteps = [
     {
         // Question 1 (Index 0)
-        text: "Hey Shagufta, Jatinder here... I have a surprise for you 😇 Do you promise to answer honestly?",
+        text: "Hey Shagufta, Jatinder here... I have a surprise for you 😇 Do you promise to answer honestly? Do you Love me.",
         buttons: [
             { text: "I promise! 🥰", nextStep: 1 },
             { text: "Yes, go on", nextStep: 1 }
