@@ -1,14 +1,14 @@
 const storySteps = [
   {
-    text: "Hey Shagufta... 😊❤️\n\nBefore I tell you something I've been secretly planning 😏, can you promise to answer a few questions honestly?\n\nNo overthinking allowed! 🤍",
+    text: "Hey Shagufta... ❤️\n\nThere's something I've wanted to tell you for a while, but before I do, can I ask you a few honest questions?\n\nThey're simple... but every answer means something to me. 🤍",
     buttons: [
-      { text: "Promise 😇", nextStep: 1 },
-      { text: "Challenge accepted 😏", nextStep: 1 }
+      { text: "I'll answer honestly 😊", nextStep: 1 },
+      { text: "Okay... I'm curious ❤️", nextStep: 1 }
     ]
   },
 
   {
-    text: "Imagine you suddenly got a free evening this week... ✨\n\nWhat's the first thing you'd love to do?",
+    text: "Imagine you suddenly had a completely free evening this week... ✨\n\nWhat's the first thing you'd want to do?",
     buttons: [
       { text: "Something fun 🎉", nextStep: 2 },
       { text: "Try something new 😍", nextStep: 2 }
@@ -16,18 +16,18 @@ const storySteps = [
   },
 
   {
-    text: "Do you think the best memories are the ones you never planned? 💫",
+    text: "Do you think the best memories are usually the ones that aren't planned... but simply happen with the right person? 💫",
     buttons: [
       { text: "Absolutely ❤️", nextStep: 3 },
-      { text: "100% 😄", nextStep: 3 }
+      { text: "I really do 😊", nextStep: 3 }
     ]
   },
 
   {
-    text: "Be honest... 😌\n\nIf I planned a surprise for you, would you trust me enough to come along without asking too many questions? 🤭",
+    text: "Be completely honest... 😌\n\nIf I planned a surprise just for you, would you trust me enough to come along without knowing every little detail? 🤍",
     buttons: [
       { text: "Maybe 😄", nextStep: 4 },
-      { text: "I think so ❤️", nextStep: 4 }
+      { text: "I think I would ❤️", nextStep: 4 }
     ]
   },
 
@@ -35,12 +35,12 @@ const storySteps = [
     text: "What's more your style? 😊",
     buttons: [
       { text: "Laugh until my cheeks hurt 😂", nextStep: 5 },
-      { text: "Deep conversations over delicious food 🍝", nextStep: 5 }
+      { text: "Deep conversations over good food 🍝", nextStep: 5 }
     ]
   },
 
   {
-    text: "Quick question... 😌\n\nIf we were hanging out right now, what do you think we'd be doing?",
+    text: "One more question... 😊\n\nIf we were together right now, what do you think we'd be doing?",
     buttons: [
       { text: "Laughing at something silly 😂", nextStep: 6 },
       { text: "Looking for amazing food 🍕", nextStep: 6 }
@@ -48,89 +48,97 @@ const storySteps = [
   },
 
   {
-    text: "What if I told you... we don't actually have to choose just one? 😉",
+    text: "What if I told you... we don't actually have to choose between the two? 😉",
     buttons: [
       { text: "Now I'm curious 👀", nextStep: 7 },
-      { text: "Tell me! ❤️", nextStep: 7 }
+      { text: "Tell me ❤️", nextStep: 7 }
     ]
   },
 
   {
-    text: "I know a place where we can jump around like little kids, laugh at each other, compete in silly challenges, and forget about everything for a while. 🤸✨",
+    text: "I know a place where we can jump around like little kids, laugh at each other, make silly memories and forget the rest of the world for a while. 🤸✨",
     buttons: [
       { text: "That sounds amazing 😍", nextStep: 8 },
-      { text: "Go on... 🤭", nextStep: 8 }
+      { text: "Go on... ❤️", nextStep: 8 }
     ]
   },
 
   {
-    text: "And once we're completely exhausted... 😄\n\nWe'll reward ourselves with a delicious dinner, lots of conversations, and hopefully make one of those memories we'll laugh about for years. 🍽️🌙",
+    text: "And after we've completely exhausted ourselves... 😄\n\nWe'll end the evening with a nice dinner, good conversations, and hopefully a memory that makes us smile every time we think about it. 🌙🍽️",
     buttons: [
-      { text: "That sounds perfect ❤️", nextStep: 9 },
-      { text: "I'm listening 👀", nextStep: 9 }
+      { text: "I love that ❤️", nextStep: 9 },
+      { text: "Sounds perfect 🥰", nextStep: 9 }
     ]
   },
 
-  // Calendar Step
+  // Weekend Selection
   {
-    text: "Before I officially ask... 📅\n\nIf this actually happens, which day would you like to go? ❤️",
+    text: "Looks like we're actually planning this... 😏❤️\n\nSo tell me...\n\nWhich weekend should become *our* weekend? 📅",
+    buttons: [
+      { text: "This Weekend 🌸", nextStep: 10 },
+      { text: "Next Weekend ✨", nextStep: 11 }
+    ]
+  },
+
+  // This Weekend Calendar
+  {
+    text: "Perfect! ❤️\n\nNow pick the exact day you'd like us to go.",
     calendar: true,
     button: {
-      text: "I've picked a date ❤️",
-      nextStep: 10
+      text: "Done ❤️",
+      nextStep: 12
     }
   },
 
+  // Next Weekend Calendar
   {
-    text: "Okay... moment of truth. 🥹❤️\n\nWill you let me take you on a trampoline date followed by dinner and let me try to make it one of your favorite memories?",
+    text: "I like that choice. ❤️\n\nNow choose the exact date.",
+    calendar: true,
+    button: {
+      text: "Done ❤️",
+      nextStep: 12
+    }
+  },
+
+  // Proposal
+  {
+    text: "Okay... here's what all these questions were leading to. 🥹❤️\n\nI'd really love to take you on a trampoline date followed by dinner.\n\nNot because it's fancy...\n\nBut because I genuinely think every moment spent with you becomes a little more special.\n\nSo... will you let me take you out? 🤍",
     buttons: [
-      { text: "YES!! ❤️🥹", nextStep: 11 },
-      { text: "Let me think 😊", nextStep: 12 }
+      { text: "YES ❤️🥹", nextStep: 13 },
+      { text: "Let me think 😊", nextStep: 16 }
     ]
   },
 
-  // YES ENDING
+  // YES
   {
-    text:
-`🚨 DATE APPLICATION APPROVED! 🚨
-
-Congratulations!! 🥳🎉
-
-You have officially agreed to spend time with one slightly overexcited guy.
-
-Please be aware of the following possible side effects:
-
-🤸 Random trampoline competitions.
-😂 Excessive laughing.
-🍟 Me trying to steal one bite from your food.
-📸 Too many cute pictures.
-❤️ Accidentally creating one of our favorite memories.
-
-Terms & Conditions:
-• No refunds.
-• No cancellations.
-• Unlimited smiles included.
-
-See you on our date! 😌💖`,
+    text: "🎉 DATE CONFIRMED! 🎉\n\nCongratulations! 🥳\n\nYou've officially unlocked:\n\n🤸 One trampoline adventure.\n🍕 One delicious dinner.\n😂 Unlimited laughter.\n📸 Too many cute photos.\n❤️ One very excited guy who's already looking forward to seeing you.\n\n(Please note: Side effects may include smiling for no reason after the date. 😄)",
     buttons: [
-      { text: "I accept the terms 😂❤️", nextStep: -1 }
+      { text: "Continue ❤️", nextStep: 14 }
     ]
   },
 
-  // THINK ENDING
+  // Confession
   {
-    text:
-`Hmm... 🤔
-
-I'll allow exactly ONE overthinking session. 😄
-
-Take your time...
-
-Just remember, this invitation doesn't expire anytime soon, because spending time with you is worth waiting for. ❤️
-
-(But don't make me wait until we're both grandparents. 👵👴😂)`,
+    text: "There's one last thing... ❤️\n\nThe truth is...\n\nThis was never just about a trampoline park or dinner.\n\nIt was my way of telling you that I genuinely enjoy every conversation we have.\n\nI smile when your name pops up.\n\nI look forward to talking to you.\n\nAnd somewhere along the way... you became someone very special to me.\n\nI don't know what the future holds, but I'd really love the chance to create more memories with you. 🤍",
     buttons: [
-      { text: "Deal ❤️", nextStep: -1 }
+      { text: "One last question... 😊", nextStep: 15 }
+    ]
+  },
+
+  // Final Question
+  {
+    text: "Now that you know how I feel... ❤️\n\nWhat do you think?\n\nCould this be the beginning of something beautiful between us? 🌸",
+    buttons: [
+      { text: "I hope so ❤️", nextStep: -1 },
+      { text: "Let's find out together 🥰", nextStep: -1 }
+    ]
+  },
+
+  // THINK
+  {
+    text: "That's completely okay. ❤️\n\nI didn't create this to pressure you.\n\nI created it because I wanted you to know how special you are to me.\n\nTake all the time you need.\n\nWhenever you're ready, my invitation—and my feelings—will still be here. 🤍",
+    buttons: [
+      { text: "Thank you ❤️", nextStep: -1 }
     ]
   }
 ];
