@@ -1,81 +1,139 @@
 const storySteps = [
   {
-    text: "Hey Shagufta 😊 I have a tiny surprise for you... Will you answer my questions honestly till the end? 🤍",
+    text: "Hey Shagufta... 😊❤️\n\nBefore I tell you something I've been secretly planning 😏, can you promise to answer a few questions honestly?\n\nNo overthinking allowed! 🤍",
     buttons: [
-      { text: "Promise! 🥰", nextStep: 1 },
-      { text: "I'm ready 😄", nextStep: 1 }
+      { text: "Promise 😇", nextStep: 1 },
+      { text: "Challenge accepted 😏", nextStep: 1 }
     ]
   },
+
   {
-    text: "If you suddenly got a free evening this week, what would you love to do the most? ✨",
+    text: "Imagine you suddenly got a free evening this week... ✨\n\nWhat's the first thing you'd love to do?",
     buttons: [
       { text: "Something fun 🎉", nextStep: 2 },
       { text: "Try something new 😍", nextStep: 2 }
     ]
   },
+
   {
-    text: "Do you think life is more fun when you make random memories instead of just planning them? 💫",
+    text: "Do you think the best memories are the ones you never planned? 💫",
     buttons: [
       { text: "Absolutely ❤️", nextStep: 3 },
-      { text: "Yes, definitely 😊", nextStep: 3 }
+      { text: "100% 😄", nextStep: 3 }
     ]
   },
+
   {
-    text: "Be honest... if I planned a fun surprise, would you trust me enough to come along? 😌",
+    text: "Be honest... 😌\n\nIf I planned a surprise for you, would you trust me enough to come along without asking too many questions? 🤭",
     buttons: [
       { text: "Maybe 😄", nextStep: 4 },
-      { text: "I think so 🤭", nextStep: 4 }
+      { text: "I think so ❤️", nextStep: 4 }
     ]
   },
+
   {
-    text: "What's more your style—laughing until your cheeks hurt or having deep conversations over delicious food? 😋",
+    text: "What's more your style? 😊",
     buttons: [
-      { text: "Laughing 😂", nextStep: 5 },
-      { text: "Good food 🍝", nextStep: 5 }
+      { text: "Laugh until my cheeks hurt 😂", nextStep: 5 },
+      { text: "Deep conversations over delicious food 🍝", nextStep: 5 }
     ]
   },
+
   {
-    text: "What if I told you... we don't have to choose just one? 😉",
+    text: "Quick question... 😌\n\nIf we were hanging out right now, what do you think we'd be doing?",
     buttons: [
-      { text: "Now I'm curious 👀", nextStep: 6 },
-      { text: "Tell me! 🤍", nextStep: 6 }
+      { text: "Laughing at something silly 😂", nextStep: 6 },
+      { text: "Looking for amazing food 🍕", nextStep: 6 }
     ]
   },
+
   {
-    text: "I know a place where we can jump around like kids, laugh at each other, and forget about everything for a while. 🤸✨",
+    text: "What if I told you... we don't actually have to choose just one? 😉",
     buttons: [
-      { text: "That sounds fun 😍", nextStep: 7 },
-      { text: "Go on... 😊", nextStep: 7 }
+      { text: "Now I'm curious 👀", nextStep: 7 },
+      { text: "Tell me! ❤️", nextStep: 7 }
     ]
   },
+
   {
-    text: "And after we've burned all that energy, we can reward ourselves with a nice dinner and lots of conversations. 🍽️🌙",
+    text: "I know a place where we can jump around like little kids, laugh at each other, compete in silly challenges, and forget about everything for a while. 🤸✨",
     buttons: [
-      { text: "Sounds perfect ❤️", nextStep: 8 },
-      { text: "I'm listening 🤭", nextStep: 8 }
+      { text: "That sounds amazing 😍", nextStep: 8 },
+      { text: "Go on... 🤭", nextStep: 8 }
     ]
   },
+
   {
-    text: "So... Shagufta, would you make me the happiest guy and let me take you to a trampoline park followed by dinner? 🥹❤️",
+    text: "And once we're completely exhausted... 😄\n\nWe'll reward ourselves with a delicious dinner, lots of conversations, and hopefully make one of those memories we'll laugh about for years. 🍽️🌙",
     buttons: [
-      { text: "Yes! I'd love to ❤️", nextStep: 9 },
-      { text: "Let me think 😊", nextStep: 10 }
+      { text: "That sounds perfect ❤️", nextStep: 9 },
+      { text: "I'm listening 👀", nextStep: 9 }
     ]
   },
+
+  // Calendar Step
   {
-    text: "Yay!! 🎉 I promise we'll have an amazing time, make unforgettable memories, and I'll make sure you leave with a big smile. ❤️",
+    text: "Before I officially ask... 📅\n\nIf this actually happens, which day would you like to go? ❤️",
+    calendar: true,
+    button: {
+      text: "I've picked a date ❤️",
+      nextStep: 10
+    }
+  },
+
+  {
+    text: "Okay... moment of truth. 🥹❤️\n\nWill you let me take you on a trampoline date followed by dinner and let me try to make it one of your favorite memories?",
     buttons: [
-      { text: "Let's do it! 🥰", nextStep: -1 }
+      { text: "YES!! ❤️🥹", nextStep: 11 },
+      { text: "Let me think 😊", nextStep: 12 }
     ]
   },
+
+  // YES ENDING
   {
-    text: "No pressure at all. 😊 I just wanted to ask because I genuinely enjoy spending time with you. Whenever you're comfortable, the invitation will still be there. 🤍",
+    text:
+`🚨 DATE APPLICATION APPROVED! 🚨
+
+Congratulations!! 🥳🎉
+
+You have officially agreed to spend time with one slightly overexcited guy.
+
+Please be aware of the following possible side effects:
+
+🤸 Random trampoline competitions.
+😂 Excessive laughing.
+🍟 Me trying to steal one bite from your food.
+📸 Too many cute pictures.
+❤️ Accidentally creating one of our favorite memories.
+
+Terms & Conditions:
+• No refunds.
+• No cancellations.
+• Unlimited smiles included.
+
+See you on our date! 😌💖`,
     buttons: [
-      { text: "Thank you ❤️", nextStep: -1 }
+      { text: "I accept the terms 😂❤️", nextStep: -1 }
+    ]
+  },
+
+  // THINK ENDING
+  {
+    text:
+`Hmm... 🤔
+
+I'll allow exactly ONE overthinking session. 😄
+
+Take your time...
+
+Just remember, this invitation doesn't expire anytime soon, because spending time with you is worth waiting for. ❤️
+
+(But don't make me wait until we're both grandparents. 👵👴😂)`,
+    buttons: [
+      { text: "Deal ❤️", nextStep: -1 }
     ]
   }
 ];
-
 const startBtn = document.getElementById('start-btn');
 const modal = document.getElementById('popup-modal');
 const modalText = document.getElementById('modal-text');
