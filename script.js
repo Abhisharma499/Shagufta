@@ -1,71 +1,77 @@
 const storySteps = [
   {
-    text: "Hey Shagufta 😊 Can I ask you something? Promise you'll answer honestly? 🤭",
+    text: "Hey Shagufta 😊 I have a tiny surprise for you... Will you answer my questions honestly till the end? 🤍",
     buttons: [
-      { text: "Promise! 💕", nextStep: 1 },
-      { text: "Go ahead 😄", nextStep: 1 }
+      { text: "Promise! 🥰", nextStep: 1 },
+      { text: "I'm ready 😄", nextStep: 1 }
     ]
   },
   {
-    text: "What's your idea of a perfect day if you could spend it with someone you enjoy talking to? ✨",
+    text: "If you suddenly got a free evening this week, what would you love to do the most? ✨",
     buttons: [
-      { text: "Somewhere peaceful 🌸", nextStep: 2 },
-      { text: "Fun & adventurous 🎉", nextStep: 2 }
+      { text: "Something fun 🎉", nextStep: 2 },
+      { text: "Try something new 😍", nextStep: 2 }
     ]
   },
   {
-    text: "If someone wanted to steal a few hours of your weekend, what would convince you? 😏",
+    text: "Do you think life is more fun when you make random memories instead of just planning them? 💫",
     buttons: [
-      { text: "Good company 😊", nextStep: 3 },
-      { text: "Lots of food 😂", nextStep: 3 }
+      { text: "Absolutely ❤️", nextStep: 3 },
+      { text: "Yes, definitely 😊", nextStep: 3 }
     ]
   },
   {
-    text: "Be honest... do you think I make your day a little more interesting? 🤭",
+    text: "Be honest... if I planned a fun surprise, would you trust me enough to come along? 😌",
     buttons: [
-      { text: "Maybe... 😄", nextStep: 4 },
-      { text: "Yes, you do 😊", nextStep: 4 }
+      { text: "Maybe 😄", nextStep: 4 },
+      { text: "I think so 🤭", nextStep: 4 }
     ]
   },
   {
-    text: "If we randomly bumped into each other with nothing to do, what would you choose? ☕🍿🚶",
+    text: "What's more your style—laughing until your cheeks hurt or having deep conversations over delicious food? 😋",
     buttons: [
-      { text: "Grab coffee ☕", nextStep: 5 },
-      { text: "Just walk & talk 🌇", nextStep: 5 }
+      { text: "Laughing 😂", nextStep: 5 },
+      { text: "Good food 🍝", nextStep: 5 }
     ]
   },
   {
-    text: "Who's usually better at making plans—you or me? 😌",
+    text: "What if I told you... we don't have to choose just one? 😉",
     buttons: [
-      { text: "Definitely you 😄", nextStep: 6 },
-      { text: "Let's find out 😉", nextStep: 6 }
+      { text: "Now I'm curious 👀", nextStep: 6 },
+      { text: "Tell me! 🤍", nextStep: 6 }
     ]
   },
   {
-    text: "Suppose I planned something fun with zero boring moments... would you trust my planning skills? 😎",
+    text: "I know a place where we can jump around like kids, laugh at each other, and forget about everything for a while. 🤸✨",
     buttons: [
-      { text: "I think so 😁", nextStep: 7 },
-      { text: "Only if it's interesting 🤭", nextStep: 7 }
+      { text: "That sounds fun 😍", nextStep: 7 },
+      { text: "Go on... 😊", nextStep: 7 }
     ]
   },
   {
-    text: "What's one place you've been wanting to visit but haven't gone yet? 🌸",
+    text: "And after we've burned all that energy, we can reward ourselves with a nice dinner and lots of conversations. 🍽️🌙",
     buttons: [
-      { text: "A cozy café ☕", nextStep: 8 },
-      { text: "A nice movie 🎬", nextStep: 8 }
+      { text: "Sounds perfect ❤️", nextStep: 8 },
+      { text: "I'm listening 🤭", nextStep: 8 }
     ]
   },
   {
-    text: "Hypothetically... if your favorite person invited you for coffee or a movie, would you say yes? 😇",
+    text: "So... Shagufta, would you make me the happiest guy and let me take you to a trampoline park followed by dinner? 🥹❤️",
     buttons: [
-      { text: "Maybe... 😉", nextStep: 9 },
-      { text: "Depends who's asking 😄", nextStep: 9 }
+      { text: "Yes! I'd love to ❤️", nextStep: 9 },
+      { text: "Let me think 😊", nextStep: 10 }
     ]
   },
   {
-    text: "Then I guess I'll have to be brave enough to ask you someday... until then, keep a little free time for me. 😊❤️",
+    text: "Yay!! 🎉 I promise we'll have an amazing time, make unforgettable memories, and I'll make sure you leave with a big smile. ❤️",
     buttons: [
-      { text: "Let's see 😄", nextStep: -1 }
+      { text: "Let's do it! 🥰", nextStep: -1 }
+    ]
+  },
+  {
+    text: "No pressure at all. 😊 I just wanted to ask because I genuinely enjoy spending time with you. Whenever you're comfortable, the invitation will still be there. 🤍",
+    buttons: [
+      { text: "Thank you ❤️", nextStep: -1 }
     ]
   }
 ];
