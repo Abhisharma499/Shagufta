@@ -1,5 +1,3 @@
-<!-- STREAMING_CHUNK: Updating the script.js file with 10+ custom steps, negative alternative texts, and heart generator loop... -->
-```javascript:Valentine's Proposal Logic:script.js
 const storySteps = [
     {
         // Question 1 (Index 0)
