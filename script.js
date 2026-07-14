@@ -1,83 +1,73 @@
 const storySteps = [
-    {
-        // Question 1 (Index 0)
-        text: "Hey Shagufta, Jatinder here... I have a surprise for you 😇 Do you promise to answer honestly? Do you Love me.",
-        buttons: [
-            { text: "I promise! 🥰", nextStep: 1 },
-            { text: "Yes, go on", nextStep: 1 }
-        ]
-    },
-    {
-        // Question 2 (Index 1)
-        text: "Do you believe in destiny? Because meeting you felt like my favorite page of a love story... ✨",
-        buttons: [
-            { text: "Yes, I do! ❤️", nextStep: 2 },
-            { text: "Only with you 🥺", nextStep: 2 }
-        ]
-    },
-    {
-        // Question 3 (Index 2)
-        text: "Am I the lucky person who gets to make you laugh and bring that gorgeous smile to your face? ☀️",
-        buttons: [
-            { text: "Yes, obviously! 💕", nextStep: 3 },
-            { text: "Unquestionably yes!", nextStep: 3 }
-        ]
-    },
-    {
-        // Question 4 (Index 3)
-        text: "Did you know that my heart beats a little faster every single time your name pops up on my screen? 💓",
-        buttons: [
-            { text: "Mine does too! 👉👈", nextStep: 4 },
-            { text: "I had a feeling... 🙈", nextStep: 4 }
-        ]
-    },
-    {
-        // Question 5 (Index 4)
-        text: "If I promised to always hold your hand through dark days and celebrate all your wins, would you let me? 🤝",
-        buttons: [
-            { text: "I would love that 🌹", nextStep: 5 },
-            { text: "Always, yes!", nextStep: 5 }
-        ]
-    },
-    {
-        // Question 6 (Index 5)
-        text: "Would you mind if we wrote our own beautiful, infinite love story together? 📖",
-        buttons: [
-            { text: "Let's write it! ✍️", nextStep: 6 },
-            { text: "No, I'd hate it", nextStep: 5, type: "runaway" } // Stays on same step if clicked
-        ]
-    },
-    {
-        // Question 7 (Index 6)
-        text: "Are you ready for the most important, heart-pounding question of my life? 👉👈",
-        buttons: [
-            { text: "Yes, tell me! 😍", nextStep: 7 },
-            { text: "No, skip", nextStep: 6, type: "runaway" }
-        ]
-    },
-    {
-        // Question 8 (Index 7) - The Grand Proposal!
-        text: "Shagufta, you deserve the absolute best in this world. Will you do me, Jatinder, the honor of being my partner? 💍",
-        buttons: [
-            { text: "YES! A million times! 😍", nextStep: 9 }, // Jumps straight to success screen
-            { text: "No 😢", nextStep: 8, type: "runaway" }    // Leads to guilt trip
-        ]
-    },
-    {
-        // Question 9 (Index 8) - Guilt Trip (Infinite loop if they try to bypass runaway)
-        text: "Wait... did you just try to click No? Look at my eyes, Shagufta. Are you absolutely sure? 🥺",
-        buttons: [
-            { text: "Okay fine, Yes! ❤️", nextStep: 9 },
-            { text: "Yes, I am sure", nextStep: 8, type: "runaway" }
-        ]
-    },
-    {
-        // Question 10 (Index 9) - Success Screen
-        text: "Yay! 🎉 Shagufta & Jatinder, forever and always. You have made me the happiest guy alive! Check your phone! ❤️",
-        buttons: [
-            { text: "Our Forever Starts Now 👩‍❤️‍👨", nextStep: -1 }
-        ]
-    }
+  {
+    text: "Hey Shagufta 😊 Can I ask you something? Promise you'll answer honestly? 🤭",
+    buttons: [
+      { text: "Promise! 💕", nextStep: 1 },
+      { text: "Go ahead 😄", nextStep: 1 }
+    ]
+  },
+  {
+    text: "What's your idea of a perfect day if you could spend it with someone you enjoy talking to? ✨",
+    buttons: [
+      { text: "Somewhere peaceful 🌸", nextStep: 2 },
+      { text: "Fun & adventurous 🎉", nextStep: 2 }
+    ]
+  },
+  {
+    text: "If someone wanted to steal a few hours of your weekend, what would convince you? 😏",
+    buttons: [
+      { text: "Good company 😊", nextStep: 3 },
+      { text: "Lots of food 😂", nextStep: 3 }
+    ]
+  },
+  {
+    text: "Be honest... do you think I make your day a little more interesting? 🤭",
+    buttons: [
+      { text: "Maybe... 😄", nextStep: 4 },
+      { text: "Yes, you do 😊", nextStep: 4 }
+    ]
+  },
+  {
+    text: "If we randomly bumped into each other with nothing to do, what would you choose? ☕🍿🚶",
+    buttons: [
+      { text: "Grab coffee ☕", nextStep: 5 },
+      { text: "Just walk & talk 🌇", nextStep: 5 }
+    ]
+  },
+  {
+    text: "Who's usually better at making plans—you or me? 😌",
+    buttons: [
+      { text: "Definitely you 😄", nextStep: 6 },
+      { text: "Let's find out 😉", nextStep: 6 }
+    ]
+  },
+  {
+    text: "Suppose I planned something fun with zero boring moments... would you trust my planning skills? 😎",
+    buttons: [
+      { text: "I think so 😁", nextStep: 7 },
+      { text: "Only if it's interesting 🤭", nextStep: 7 }
+    ]
+  },
+  {
+    text: "What's one place you've been wanting to visit but haven't gone yet? 🌸",
+    buttons: [
+      { text: "A cozy café ☕", nextStep: 8 },
+      { text: "A nice movie 🎬", nextStep: 8 }
+    ]
+  },
+  {
+    text: "Hypothetically... if your favorite person invited you for coffee or a movie, would you say yes? 😇",
+    buttons: [
+      { text: "Maybe... 😉", nextStep: 9 },
+      { text: "Depends who's asking 😄", nextStep: 9 }
+    ]
+  },
+  {
+    text: "Then I guess I'll have to be brave enough to ask you someday... until then, keep a little free time for me. 😊❤️",
+    buttons: [
+      { text: "Let's see 😄", nextStep: -1 }
+    ]
+  }
 ];
 
 const startBtn = document.getElementById('start-btn');
