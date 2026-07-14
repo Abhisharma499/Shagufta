@@ -170,46 +170,58 @@ function showStep(index) {
     modal.classList.remove('hidden');
 }
 
+// Fixed runaway formula: constrains button movement relative to `.modal-box` container limits
 function moveButtonRandomly(btn) {
-    const maxX = window.innerWidth - 150;
-    const maxY = window.innerHeight - 80;
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
+    const modalBox = document.querySelector('.modal-box');
+    
+    // Convert button to absolute positioning relative to .modal-box
+    btn.style.position = 'absolute';
+    
+    const containerWidth = modalBox.clientWidth;
+    const containerHeight = modalBox.clientHeight;
+    
+    const btnWidth = btn.offsetWidth || 120;
+    const btnHeight = btn.offsetHeight || 45;
+    
+    // Define safe horizontal margins inside the pop-up panel
+    const minX = 20;
+    const maxX = containerWidth - btnWidth - 20;
+    
+    // Restrict the button to the lower part of the modal (underneath the text)
+    const minY = Math.floor(containerHeight * 0.45);
+    const maxY = containerHeight - btnHeight - 20;
+    
+    // Generate safe coordinates inside the modal dimensions
+    const randomX = Math.floor(Math.random() * (maxX - minX)) + minX;
+    const randomY = Math.floor(Math.random() * (maxY - minY)) + minY;
+    
     btn.style.left = randomX + 'px';
     btn.style.top = randomY + 'px';
 }
 
-/* STREAMING_CHUNK: Spawning dynamic falling emoji hearts... */
 // Raining Hearts Spawner
 function createHeart() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     
-    // collection of sweet, romantic symbols
     const romanticEmojis = ['❤️', '💖', '💝', '💕', '💗', '💓', '🌸', '✨'];
     heart.innerText = romanticEmojis[Math.floor(Math.random() * romanticEmojis.length)];
     
-    // Random horizontal starting coordinates
     heart.style.left = Math.random() * 100 + 'vw';
     
-    // Vary the emoji sizes for depth
-    const size = Math.random() * 1.5 + 0.6; // Scale ranges from 0.6rem to 2.1rem
+    const size = Math.random() * 1.5 + 0.6;
     heart.style.fontSize = size + 'rem';
     
-    // Vary falling speeds
-    const duration = Math.random() * 4 + 4; // Ranges from 4 to 8 seconds
+    const duration = Math.random() * 4 + 4;
     heart.style.animationDuration = duration + 's';
     
-    // Randomize opacity
     heart.style.opacity = Math.random() * 0.6 + 0.4;
     
     document.body.appendChild(heart);
     
-    // Clear elements from DOM once they fall off the page
     setTimeout(() => {
         heart.remove();
     }, duration * 1000);
 }
 
-// Spawns a heart every 350 milliseconds
 setInterval(createHeart, 350);
